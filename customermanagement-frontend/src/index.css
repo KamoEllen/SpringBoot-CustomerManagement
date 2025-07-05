@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+
+:root {
+    --primary-gold: #D4AF37;
+    --dark-gold: #B8941F;
+    --light-gold: #F5E6A3;
+    --charcoal: #2C3E50;
+    --navy: #1A252F;
+    --silver: #BDC3C7;
+    --pearl: #F8F9FA;
+    --accent-blue: #3498DB;
+    --success-green: #27AE60;
+    --danger-red: #E74C3C;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-medium: rgba(0, 0, 0, 0.2);
+    --shadow-heavy: rgba(0, 0, 0, 0.3);
+}
+
+
+body {
+    background: linear-gradient(135deg, #F8F9FA 0%, #E8E9EA 100%);
+    color: var(--charcoal);
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+
+.navbar {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--charcoal) 100%) !important;
+    box-shadow: 0 4px 20px var(--shadow-medium);
+    border-bottom: 2px solid var(--primary-gold);
+    padding: 1rem 0 !important;
+}
+
+.navbar-brand {
+    font-family: 'Playfair Display', serif !important;
+    font-size: 1.8rem !important;
+    font-weight: 600 !important;
+    color: var(--primary-gold) !important;
+    text-shadow: 2px 2px 4px var(--shadow-light);
+    letter-spacing: 1px;
+    margin: 0 !important;
+}
+
+.navbar-brand:hover {
+    color: var(--light-gold) !important;
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+}
+
+
+.container {
+    padding-top: 2rem;
+    padding-bottom: 120px; 
+    max-width: 1200px;
+}
+
+
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px var(--shadow-light);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 60px var(--shadow-medium);
+}
+
+.card-body {
+    padding: 2.5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    color: var(--navy);
+    margin-bottom: 1.5rem;
+}
+
+.text-center h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+.text-center h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-gold), var(--dark-gold));
+    border-radius: 2px;
+}
+
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-control {
+    border: 2px solid var(--silver);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--charcoal);
+}
+
+.form-control:focus {
+    border-color: var(--primary-gold);
+    box-shadow: 0 0 0 0.2rem rgba(212, 175, 55, 0.25);
+    outline: none;
+    background: white;
+}
+
+.form-control::placeholder {
+    color: var(--silver);
+    font-weight: 300;
+}
+
+
+.btn {
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.9rem;
+}
+
+.btn-success {
+    background: linear-gradient(135deg, var(--success-green), #229954);
+    color: white;
+    box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+}
+
+.btn-success:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(39, 174, 96, 0.4);
+    background: linear-gradient(135deg, #229954, var(--success-green));
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--accent-blue), #2980B9);
+    color: white;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4);
+    background: linear-gradient(135deg, #2980B9, var(--accent-blue));
+}
+
+.btn-info {
+    background: linear-gradient(135deg, var(--primary-gold), var(--dark-gold));
+    color: white;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.btn-info:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+    background: linear-gradient(135deg, var(--dark-gold), var(--primary-gold));
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, var(--danger-red), #C0392B);
+    color: white;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+}
+
+.btn-danger:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(231, 76, 60, 0.4);
+    background: linear-gradient(135deg, #C0392B, var(--danger-red));
+}
+
+
+.table {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px var(--shadow-light);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.table thead th {
+    background: linear-gradient(135deg, var(--navy), var(--charcoal));
+    color: var(--primary-gold);
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    border: none;
+    padding: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.table tbody td {
+    padding: 1rem 1.2rem;
+    border: none;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+    color: var(--charcoal);
+    font-weight: 400;
+}
+
+.table tbody tr:hover {
+    background: rgba(212, 175, 55, 0.05);
+    transform: scale(1.01);
+    transition: all 0.3s ease;
+}
+
+.table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+.footer {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--charcoal) 100%);
+    color: var(--primary-gold);
+    padding: 2rem 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 2px solid var(--primary-gold);
+    box-shadow: 0 -4px 20px var(--shadow-medium);
+    backdrop-filter: blur(10px);
+}
+
+.footer span {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+
+a {
+    color: var(--accent-blue);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-gold);
+    text-decoration: none;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .card-body {
+        padding: 1.5rem;
+    }
+    
+    .navbar-brand {
+        font-size: 1.4rem !important;
+    }
+    
+    .text-center h2 {
+        font-size: 1.8rem;
+    }
+    
+    .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.8rem;
+    }
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--pearl);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, var(--primary-gold), var(--dark-gold));
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, var(--dark-gold), var(--primary-gold));
+}
