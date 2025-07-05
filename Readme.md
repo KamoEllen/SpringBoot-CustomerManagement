@@ -1,5 +1,5 @@
 # Customer Management System Documentation
-## Spring Boot + MySQL + React → AWS (EC2, RDS, S3) Complete Deployment Guide
+<!--## Spring Boot + MySQL + React → AWS (EC2, RDS, S3) -->
 
 ## Table of Contents
 1. [Project Overview](#project-overview)
